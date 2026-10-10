@@ -1,0 +1,55 @@
+{
+  "id": "/?pwa=1",
+  "name": "Dexie Canvas Studio",
+  "short_name": "Dexie Studio",
+  "description": "Editor visual de reportes y dashboards vinculado dinámicamente a bases de datos Dexie IndexedDB con soporte 100% offline.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#111216",
+  "theme_color": "#5865f2",
+  "categories": ["productivity", "utilities", "business", "developer"],
+  "icons": [
+    {
+      "src": "/icon-192.svg",
+      "sizes": "192x192",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "/icon-512.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "/icon-maskable.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/favicon.svg",
+      "sizes": "64x64",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Nuevo Dashboard",
+      "short_name": "Nuevo",
+      "description": "Crear un nuevo dashboard en blanco",
+      "url": "/?action=new",
+      "icons": [{ "src": "/icon-192.svg", "sizes": "192x192" }]
+    },
+    {
+      "name": "Gestor de Bases de Datos",
+      "short_name": "Bases de Datos",
+      "description": "Administrar tablas y bases de datos Dexie IndexedDB",
+      "url": "/?action=db",
+      "icons": [{ "src": "/icon-192.svg", "sizes": "192x192" }]
+    }
+  ]
+}

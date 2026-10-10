@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 192" width="192" height="192">
+  <defs>
+    <linearGradient id="bg-grad-192" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#18191c" />
+      <stop offset="100%" stop-color="#0f1015" />
+    </linearGradient>
+    <linearGradient id="dc-grad-192" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#5865f2" />
+      <stop offset="45%" stop-color="#7c3aed" />
+      <stop offset="100%" stop-color="#38bdf8" />
+    </linearGradient>
+    <filter id="shadow-192" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#5865f2" flood-opacity="0.45"/>
+    </filter>
+  </defs>
+
+  <!-- Background Canvas Tile -->
+  <rect width="192" height="192" rx="44" fill="url(#bg-grad-192)" />
+  <rect x="4" y="4" width="184" height="184" rx="40" fill="none" stroke="#2f3136" stroke-width="3" />
+
+  <!-- Canvas Grid Background -->
+  <path d="M36 72h120M36 120h120M72 36v120M120 36v120" stroke="#25282c" stroke-width="2" stroke-dasharray="4 4" />
+
+  <!-- Center Card Emblem -->
+  <g filter="url(#shadow-192)">
+    <rect x="40" y="40" width="112" height="112" rx="24" fill="url(#dc-grad-192)" />
+  </g>
+
+  <!-- Inner Dashboard Widgets -->
+  <!-- Top Left KPI Box -->
+  <rect x="52" y="52" width="38" height="38" rx="8" fill="#ffffff" fill-opacity="0.95" />
+  <path d="M58 64h26M58 72h18" stroke="#5865f2" stroke-width="3" stroke-linecap="round" />
+  <circle cx="78" cy="72" r="3" fill="#38bdf8" />
+
+  <!-- Top Right Metric Card -->
+  <rect x="98" y="52" width="42" height="18" rx="6" fill="#ffffff" fill-opacity="0.8" />
+  <path d="M104 61h30" stroke="#7c3aed" stroke-width="3" stroke-linecap="round" />
+
+  <rect x="98" y="74" width="42" height="16" rx="5" fill="#ffffff" fill-opacity="0.65" />
+  <path d="M104 82h20" stroke="#0f1015" stroke-width="2.5" stroke-linecap="round" />
+
+  <!-- Bottom Chart Area -->
+  <rect x="52" y="98" width="88" height="42" rx="10" fill="#0f1015" fill-opacity="0.4" />
+  <!-- Sparkline Graph -->
+  <path d="M60 128 L76 114 L94 122 L112 108 L130 118" fill="none" stroke="#ffffff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+  <circle cx="112" cy="108" r="4" fill="#38bdf8" />
+  <circle cx="76" cy="114" r="3" fill="#ffffff" />
+</svg>

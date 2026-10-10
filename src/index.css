@@ -1,0 +1,407 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* Custom styling for jQuery UI Resizable & Canvas Handles */
+.ui-resizable-handle {
+  position: absolute;
+  font-size: 0.1px;
+  display: block;
+  touch-action: none;
+  z-index: 90;
+}
+
+.ui-resizable-e {
+  cursor: e-resize;
+  width: 8px;
+  right: -4px;
+  top: 0;
+  height: 100%;
+}
+
+.ui-resizable-w {
+  cursor: w-resize;
+  width: 8px;
+  left: -4px;
+  top: 0;
+  height: 100%;
+}
+
+.ui-resizable-s {
+  cursor: s-resize;
+  height: 8px;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+}
+
+.ui-resizable-n {
+  cursor: n-resize;
+  height: 8px;
+  top: -4px;
+  left: 0;
+  width: 100%;
+}
+
+.ui-resizable-se {
+  cursor: se-resize;
+  width: 10px;
+  height: 10px;
+  right: -5px;
+  bottom: -5px;
+  background-color: #5865f2;
+  border: 2px solid #ffffff;
+  border-radius: 2px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+}
+
+.ui-resizable-sw {
+  cursor: sw-resize;
+  width: 10px;
+  height: 10px;
+  left: -5px;
+  bottom: -5px;
+  background-color: #5865f2;
+  border: 2px solid #ffffff;
+  border-radius: 2px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+}
+
+.ui-resizable-ne {
+  cursor: ne-resize;
+  width: 10px;
+  height: 10px;
+  right: -5px;
+  top: -5px;
+  background-color: #5865f2;
+  border: 2px solid #ffffff;
+  border-radius: 2px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+}
+
+.ui-resizable-nw {
+  cursor: nw-resize;
+  width: 10px;
+  height: 10px;
+  left: -5px;
+  top: -5px;
+  background-color: #5865f2;
+  border: 2px solid #ffffff;
+  border-radius: 2px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+}
+
+/* Canvas grid background pattern */
+.canvas-grid-pattern {
+  background-size: 20px 20px;
+  background-image: 
+    linear-gradient(to right, rgba(203, 213, 225, 0.4) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(203, 213, 225, 0.4) 1px, transparent 1px);
+}
+
+.canvas-grid-pattern-dark {
+  background-size: 20px 20px;
+  background-image: 
+    linear-gradient(to right, rgba(75, 85, 99, 0.3) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(75, 85, 99, 0.3) 1px, transparent 1px);
+}
+
+/* Sleek Interface Scrollbars (Dynamic Light/Dark) */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #1a1b1e;
+}
+::-webkit-scrollbar-thumb {
+  background: #373a40;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #4a4d55;
+}
+
+html.light ::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+html.light ::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 3px;
+}
+html.light ::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* ==========================================================================
+   Full Studio Application UI Light Theme Overrides
+   ========================================================================== */
+html.light {
+  color-scheme: light;
+}
+
+html.dark {
+  color-scheme: dark;
+}
+
+html.light body,
+html.light #root {
+  background-color: #f8fafc;
+  color: #0f172a;
+}
+
+/* Base Surfaces in Light Mode */
+html.light .bg-\[\#1a1b1e\] {
+  background-color: #f8fafc !important;
+}
+html.light .bg-\[\#202225\] {
+  background-color: #ffffff !important;
+}
+html.light .bg-\[\#25282c\] {
+  background-color: #f1f5f9 !important;
+}
+html.light .bg-\[\#141517\] {
+  background-color: #eef2f6 !important;
+}
+html.light .bg-\[\#1e2023\] {
+  background-color: #f1f5f9 !important;
+}
+html.light .bg-\[\#18191c\] {
+  background-color: #f8fafc !important;
+}
+html.light .bg-\[\#2b2d31\] {
+  background-color: #ffffff !important;
+}
+html.light .bg-\[\#282a2e\],
+html.light .bg-\[\#2a2c30\] {
+  background-color: #e2e8f0 !important;
+}
+html.light .bg-\[\#1e2024\] {
+  background-color: #f1f5f9 !important;
+}
+
+/* Opacity variants of surfaces in Light Mode (CollapsibleSection bodies, badges, panels) */
+html.light .bg-\[\#202225\]\/60,
+html.light .bg-\[\#202225\]\/90,
+html.light .bg-\[\#202225\]\/95 {
+  background-color: #ffffff !important;
+}
+html.light .bg-\[\#25282c\]\/40,
+html.light .bg-\[\#25282c\]\/80 {
+  background-color: #f8fafc !important;
+}
+html.light .bg-\[\#1a1b1e\]\/40,
+html.light .bg-\[\#1a1b1e\]\/50,
+html.light .bg-\[\#1a1b1e\]\/60,
+html.light .bg-\[\#1a1b1e\]\/85,
+html.light .bg-\[\#1a1b1e\]\/90 {
+  background-color: #f1f5f9 !important;
+}
+html.light .bg-\[\#18191c\]\/80,
+html.light .bg-\[\#18191c\]\/90,
+html.light .bg-\[\#18191c\]\/95,
+html.light .bg-\[\#1e1f22\]\/95 {
+  background-color: #f8fafc !important;
+}
+
+/* Borders in Light Mode */
+html.light .border-\[\#2f3136\],
+html.light .border-\[\#26282c\] {
+  border-color: #e2e8f0 !important;
+}
+html.light .border-\[\#373a40\],
+html.light .border-\[\#3c3f44\],
+html.light .border-\[\#3f4248\] {
+  border-color: #cbd5e1 !important;
+}
+
+/* Form Controls (Inputs, Selects, Textareas) in Light Mode */
+html.light input:not([type="checkbox"]):not([type="radio"]):not([type="color"]):not([type="range"]),
+html.light select,
+html.light textarea {
+  background-color: #ffffff !important;
+  color: #0f172a !important;
+  border-color: #cbd5e1 !important;
+}
+
+html.light input:focus,
+html.light select:focus,
+html.light textarea:focus {
+  border-color: #5865f2 !important;
+}
+
+html.light input::placeholder,
+html.light textarea::placeholder {
+  color: #94a3b8 !important;
+}
+
+html.light select option {
+  background-color: #ffffff !important;
+  color: #0f172a !important;
+}
+
+/* Ruler SVG line and text in Light Mode */
+html.light .bg-\[\#18191c\] svg line {
+  stroke: #94a3b8 !important;
+}
+html.light .bg-\[\#18191c\] svg text {
+  fill: #475569 !important;
+}
+
+/* Text Colors in Light Mode */
+html.light .text-\[\#e1e1e6\] {
+  color: #0f172a !important;
+}
+html.light .text-\[\#9ca3af\] {
+  color: #64748b !important;
+}
+html.light .text-\[\#6b7280\] {
+  color: #64748b !important;
+}
+html.light .text-\[\#939db8\] {
+  color: #475569 !important;
+}
+
+/* Text that was white on neutral dark backgrounds becomes dark on light containers */
+html.light h1.text-white,
+html.light h2.text-white,
+html.light h3.text-white,
+html.light h4.text-white,
+html.light .bg-\[\#1a1b1e\] .text-white,
+html.light .bg-\[\#202225\] .text-white,
+html.light .bg-\[\#25282c\] .text-white,
+html.light .bg-\[\#141517\] .text-white,
+html.light .bg-\[\#18191c\] .text-white,
+html.light .bg-\[\#2b2d31\] .text-white,
+html.light .bg-\[\#2f3136\] .text-white,
+html.light .bg-\[\#1a1b1e\].text-white,
+html.light .bg-\[\#202225\].text-white,
+html.light .bg-\[\#25282c\].text-white,
+html.light .bg-\[\#141517\].text-white,
+html.light .bg-\[\#18191c\].text-white,
+html.light .bg-\[\#2b2d31\].text-white,
+html.light .bg-\[\#2f3136\].text-white,
+html.light span.text-white:not([class*="bg-"]):not(.keep-white),
+html.light label.text-white:not([class*="bg-"]):not(.keep-white),
+html.light div.text-white:not([class*="bg-"]):not(.keep-white),
+html.light .font-bold.text-white:not([class*="bg-"]):not(.keep-white),
+html.light .font-semibold.text-white:not([class*="bg-"]):not(.keep-white) {
+  color: #0f172a !important;
+}
+
+/* Active buttons with tinted pastel backgrounds */
+html.light [class*="bg-[#0ea5e9]/15"],
+html.light [class*="bg-[#0ea5e9]/15"] div,
+html.light [class*="bg-[#0ea5e9]/15"] span {
+  color: #0369a1 !important;
+}
+html.light [class*="bg-[#06b6d4]/15"],
+html.light [class*="bg-[#06b6d4]/15"] div,
+html.light [class*="bg-[#06b6d4]/15"] span {
+  color: #0e7490 !important;
+}
+html.light [class*="bg-[#10b981]/15"],
+html.light [class*="bg-[#10b981]/15"] div,
+html.light [class*="bg-[#10b981]/15"] span {
+  color: #047857 !important;
+}
+
+/* Hover and Focus States in Light Mode */
+html.light .hover\:bg-\[\#25282c\]:hover {
+  background-color: #f1f5f9 !important;
+}
+html.light .hover\:bg-\[\#2f3136\]:hover {
+  background-color: #e2e8f0 !important;
+}
+html.light .hover\:bg-\[\#1a1b1e\]:hover {
+  background-color: #f1f5f9 !important;
+}
+html.light .hover\:bg-\[\#2a2d32\]:hover,
+html.light .hover\:bg-\[\#282a2e\]:hover,
+html.light .hover\:bg-\[\#35383e\]:hover,
+html.light .hover\:bg-\[\#373a40\]:hover {
+  background-color: #e2e8f0 !important;
+}
+html.light .focus\:bg-\[\#1a1b1e\]:focus {
+  background-color: #ffffff !important;
+}
+html.light .hover\:text-white:hover {
+  color: #0f172a !important;
+}
+
+/* Preserve White Text for Colored Brand Buttons and Badges */
+html.light .bg-\[\#5865f2\],
+html.light [class*="bg-[#5865f2]"],
+html.light .bg-gradient-to-r,
+html.light .bg-gradient-to-tr,
+html.light [class*="from-[#5865f2]"],
+html.light [class*="from-indigo-"],
+html.light [class*="bg-indigo-600"],
+html.light [class*="bg-rose-600"],
+html.light [class*="bg-emerald-600"],
+html.light [class*="bg-cyan-500"],
+html.light .keep-white {
+  color: #ffffff !important;
+}
+
+html.light .bg-\[\#5865f2\] .text-white,
+html.light [class*="bg-[#5865f2]"] .text-white,
+html.light .bg-gradient-to-r .text-white,
+html.light .bg-gradient-to-tr .text-white,
+html.light button.bg-\[\#5865f2\] span,
+html.light button.bg-\[\#5865f2\] svg,
+html.light button.bg-\[\#5865f2\] div {
+  color: #ffffff !important;
+}
+
+/* Canvas Workspace Dot Grid in Light Mode */
+html.light div[style*="radial-gradient(rgba(75, 85, 99"] {
+  background-image: radial-gradient(rgba(100, 116, 139, 0.35) 1.5px, transparent 0) !important;
+}
+
+/* Canvas Document Shadow & Border in Light Mode */
+html.light #active-canvas-surface {
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1) !important;
+  border-color: #cbd5e1 !important;
+}
+
+/* High Contrast Accessibility Mode for Studio Editor */
+.high-contrast-mode {
+  --hc-border: #ffffff;
+  --hc-text: #ffffff;
+  --hc-focus: #ffff00;
+}
+
+.high-contrast-mode header,
+.high-contrast-mode footer,
+.high-contrast-mode aside,
+.high-contrast-mode .bg-\[\#202225\],
+.high-contrast-mode .bg-\[\#1a1b1e\] {
+  border-color: #555555 !important;
+}
+
+.high-contrast-mode button,
+.high-contrast-mode input,
+.high-contrast-mode select {
+  outline-color: #ffff00 !important;
+}
+
+.high-contrast-mode .border-\[\#2f3136\] {
+  border-color: #666666 !important;
+}
+
+.high-contrast-mode .text-\[\#9ca3af\] {
+  color: #e2e8f0 !important;
+}
+
+.high-contrast-mode .canvas-grid-pattern-dark {
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.25) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.25) 1px, transparent 1px);
+}
+
+.high-contrast-mode .canvas-grid-pattern {
+  background-image: 
+    linear-gradient(to right, rgba(0, 0, 0, 0.35) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.35) 1px, transparent 1px);
+}

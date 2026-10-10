@@ -1,0 +1,6 @@
+{
+  "name": "Dexie Canvas Studio",
+  "description": "Visual report and dashboard canvas editor bound dynamically to Dexie IndexedDB databases, with live table synchronization, interactive HTML ZIP export, Cache-First PWA offline architecture, drag-and-drop, jQuery UI resizing, layer management, undo/redo, precision zoom, JSON import/export, and multi-format image/PDF export.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
